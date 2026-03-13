@@ -1,28 +1,28 @@
 public class MonteCarloPi {
-    public static void main(String[] args) {
-        // Total number of random points to generate
-        long totalPoints = 10000000; 
-        long insideCircle = 0;
+  public static void calculator(int points) {
+      // Total number of random points to generate
+      long totalPoints = points; 
+      long insideCircle = 0;
 
-        Random random = new Random();
+      Random random = new Random();
 
-        for (long i = 0; i < totalPoints; i++) {
-            // Generate random x and y between 0.0 and 1.0
-            double x = random.nextDouble();
-            double y = random.nextDouble();
+      for (long i = 0; i < totalPoints; i++) {
+          // Generate random x and y between 0.0 and 1.0
+          double x = random.nextDouble();
+          double y = random.nextDouble();
 
-            // Check if the point is inside the unit circle 
-            // Equation: x^2 + y^2 <= 1
-            if (x * x + y * y <= 1) {
-                insideCircle++;
-            }
-        }
+          // Check if the point is inside the unit circle 
+          // Equation: x^2 + y^2 <= 1
+          if (x * x + y * y <= 1) {
+              insideCircle++;
+          }
+      }
 
-        // Calculate Pi
-        double piEstimate = 4.0 * insideCircle / totalPoints;
+      // Calculate Pi
+      double piEstimate = 4.0 * insideCircle / totalPoints;
 
-        System.out.println("Total points: " + totalPoints);
-        System.out.println("Points inside circle: " + insideCircle);
-        System.out.println("Estimated value of Pi: " + piEstimate);
-    }
+      System.out.println("Total points: " + totalPoints);
+      System.out.println("Points inside circle: " + insideCircle);
+      System.out.println("Estimated value of Pi: " + piEstimate);
+  }
 }
