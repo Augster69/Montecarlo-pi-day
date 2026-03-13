@@ -1,3 +1,4 @@
+import MonteCarlo
 public Class Main {
-  MonteCarlo.calculator(100000000);
+  MonteCarloPi.calculator(100000000);
 }
